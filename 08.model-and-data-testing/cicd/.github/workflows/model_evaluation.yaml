@@ -1,0 +1,39 @@
+name: model-training
+
+on: [push]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      # Install dependencies
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      # Run the script
+      - name: Run the model training script
+        run: |
+          python wine_linear_regression_test.py
+
+      # Display metrics
+      - name: Display metrics
+        run: |
+          cat metrics.txt
+
+      # Generate report
+      - name: Generate and post report
+        run: |
+          cat metrics.txt >> report.md
+          cml-send-comment report.md
