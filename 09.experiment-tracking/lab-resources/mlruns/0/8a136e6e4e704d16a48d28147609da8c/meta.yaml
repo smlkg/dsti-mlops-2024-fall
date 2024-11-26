@@ -1,0 +1,15 @@
+artifact_uri: file:///home/adaltas/Documents/teaching_material/mlops/modules/08.experiment-tracking/lab-resources/mlruns/0/8a136e6e4e704d16a48d28147609da8c/artifacts
+end_time: 1732635334270
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8a136e6e4e704d16a48d28147609da8c
+run_name: welcoming-trout-148
+run_uuid: 8a136e6e4e704d16a48d28147609da8c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732635330447
+status: 3
+tags: []
+user_id: Samuel
